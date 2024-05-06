@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html class="" lang="en">
+<html class="" lang="en" x-data="{ dark: false }" x-bind:class=" dark ? 'dark' : '' ">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   </head>
   <body class="bg-mainColor">
     <div class="container min-h-screen p-2 mx-auto bg-gray-100 dark:bg-gray-900">
-      <! - page header / headings ->
-      <div>
+      <!-- page header / headings -->
+      <section id="header" >
+        <button @click="dark = !dark" class="bg-gray-300 rounded">Toggle Dark Mode</button>
+        <div>
         <h1 class="leading-snug">
           Tom Gonzales home training<br />
           <span class="text-4xl italic text-indigo-900 dark:text-indigo-300 sm:text-5xl lg:text-7xl opacity-80">
             <q>&nbsp;I'll get you in shape!&nbsp;</q>
             </span>
         </h1>
-        <h2>Muscle building <br class="sm:hidden"><span class="hidden sm:inline"> • </span>Functional training<br class="sm:hidden"><span class="hidden sm:inline"> • </span>Nutritional advice</h2>
-      </div>
+        <h2> Muscle building <br class="sm:hidden"><span class="hidden sm:inline"> • </span>Functional training<br class="sm:hidden"><span class="hidden sm:inline"> • </span>Nutritional advice</h2>
+      </div></section>
+      
 
       <section class="grid mt-8 sm:grid-cols-2 sm:gap-5 xl:w-9/12 md:gap-10 xl:mx-auto" id="image_services">
       <div class="mx-auto sm:ml-auto mb-7 sm:mb-0" id="image">
         <img src="/img/tom.jpg" alt="Tom Gonzales Online Training" />
       </div>
 
-      <! - Services ->
+      <!-- Services -->
       <div id="services">
         <h3>I offer you:</h3>
         <ul class="ml-6 list-disc">
